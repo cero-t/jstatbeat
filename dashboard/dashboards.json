@@ -1,0 +1,36 @@
+[
+  {
+    "_id": "jstatbeat-dashboard-java8",
+    "_type": "dashboard",
+    "_source": {
+      "title": "jstatbeat-dashboard-java8",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"[GC]-Compressed-class-space\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":6,\"size_y\":2,\"col\":1,\"row\":9},{\"id\":\"[GC]-Eden\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":6,\"size_y\":2,\"col\":7,\"row\":5},{\"id\":\"[GC]-GC-Count\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":3,\"size_y\":2,\"col\":1,\"row\":1},{\"id\":\"[GC]-GC-Time\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":3,\"size_y\":2,\"col\":1,\"row\":3},{\"id\":\"[GC]-Metaspace\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":6,\"size_y\":4,\"col\":1,\"row\":5},{\"id\":\"[GC]-Old-Generation\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":9,\"size_y\":4,\"col\":4,\"row\":1},{\"id\":\"[GC]-Survivor-0\",\"type\":\"visualization\",\"panelIndex\":7,\"size_x\":6,\"size_y\":2,\"col\":7,\"row\":7},{\"id\":\"[GC]-Survivor-1\",\"type\":\"visualization\",\"panelIndex\":8,\"size_x\":6,\"size_y\":2,\"col\":7,\"row\":9}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "jstatbeat-dashboard-java5",
+    "_type": "dashboard",
+    "_source": {
+      "title": "jstatbeat-dashboard-java5",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"[GC]-Eden\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":6,\"size_y\":2,\"col\":1,\"row\":7},{\"id\":\"[GC]-GC-Count\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":3,\"size_y\":2,\"col\":1,\"row\":1},{\"id\":\"[GC]-GC-Time\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":3,\"size_y\":2,\"col\":1,\"row\":3},{\"id\":\"[GC]-Old-Generation\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":9,\"size_y\":4,\"col\":4,\"row\":1},{\"id\":\"[GC]-Survivor-0\",\"type\":\"visualization\",\"panelIndex\":7,\"size_x\":6,\"size_y\":2,\"col\":7,\"row\":5},{\"id\":\"[GC]-Survivor-1\",\"type\":\"visualization\",\"panelIndex\":8,\"size_x\":6,\"size_y\":2,\"col\":7,\"row\":7},{\"id\":\"[GC]-PermGen\",\"type\":\"visualization\",\"panelIndex\":9,\"size_x\":6,\"size_y\":2,\"col\":1,\"row\":5}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  }
+]
