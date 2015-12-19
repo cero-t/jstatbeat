@@ -26,6 +26,10 @@ type Jstatbeat struct {
 	isAlive bool
 }
 
+func New() *Jstatbeat {
+	return &Jstatbeat{}
+}
+
 func (jsb *Jstatbeat) Config(b *beat.Beat) error {
 	var config ConfigSettings
 	err := cfgfile.Read(&config, "")

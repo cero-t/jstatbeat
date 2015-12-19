@@ -6,10 +6,5 @@ import (
 )
 
 func main() {
-	jsb := &jsatbeat.Jstatbeat{}
-	b := beat.NewBeat("jstatbeat", "0.1", jsb)
-	b.CommandLineSetup()
-	b.LoadConfig()
-	jsb.Config(b)
-	b.Run()
+	beat.Run("jstatbeat", "0.1", jsatbeat.New())
 }
