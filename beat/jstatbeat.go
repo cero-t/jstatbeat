@@ -119,6 +119,8 @@ func (jsb *Jstatbeat) Run(b *beat.Beat) error {
 		event := common.MapStr{
 			"@timestamp": common.Time(time.Now()),
 			"type":       version,
+			"pid":        jsb.pid,
+			"name":       jsb.name,
 		}
 
 		for i, key := range keys {
