@@ -1,5 +1,39 @@
 [
   {
+    "_id": "jstatbeat-dashboard-java8",
+    "_type": "dashboard",
+    "_source": {
+      "title": "jstatbeat-dashboard-java8",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"[GC]-Compressed-class-space\",\"panelIndex\":1,\"row\":9,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"[GC]-Eden\",\"panelIndex\":2,\"row\":5,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"[GC]-GC-Count\",\"panelIndex\":3,\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"[GC]-GC-Time\",\"panelIndex\":4,\"row\":3,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"[GC]-Metaspace\",\"panelIndex\":5,\"row\":7,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":4,\"id\":\"[GC]-Old-Generation\",\"panelIndex\":6,\"row\":1,\"size_x\":9,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"[GC]-Survivor-0\",\"panelIndex\":7,\"row\":7,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"[GC]-Survivor-1\",\"panelIndex\":8,\"row\":9,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"id\":\"[GC]-Processes\",\"type\":\"visualization\",\"panelIndex\":9,\"size_x\":6,\"size_y\":2,\"col\":1,\"row\":5}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "jstatbeat-dashboard-java5",
+    "_type": "dashboard",
+    "_source": {
+      "title": "jstatbeat-dashboard-java5",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"[GC]-Eden\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":6,\"size_y\":2,\"col\":7,\"row\":5},{\"id\":\"[GC]-GC-Count\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":3,\"size_y\":2,\"col\":1,\"row\":1},{\"id\":\"[GC]-GC-Time\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":3,\"size_y\":2,\"col\":1,\"row\":3},{\"id\":\"[GC]-Old-Generation\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":9,\"size_y\":4,\"col\":4,\"row\":1},{\"id\":\"[GC]-Survivor-0\",\"type\":\"visualization\",\"panelIndex\":7,\"size_x\":6,\"size_y\":2,\"col\":7,\"row\":7},{\"id\":\"[GC]-Survivor-1\",\"type\":\"visualization\",\"panelIndex\":8,\"size_x\":6,\"size_y\":2,\"col\":7,\"row\":9},{\"id\":\"[GC]-PermGen\",\"type\":\"visualization\",\"panelIndex\":9,\"size_x\":6,\"size_y\":2,\"col\":1,\"row\":9},{\"id\":\"[GC]-Processes\",\"type\":\"visualization\",\"panelIndex\":10,\"size_x\":6,\"size_y\":4,\"col\":1,\"row\":5}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  },
+  {
     "_id": "[GC]-Compressed-class-space",
     "_type": "visualization",
     "_source": {
@@ -98,11 +132,11 @@
     }
   },
   {
-    "_id": "[GC]-GC-Count",
+    "_id": "[GC]-GC-Time",
     "_type": "visualization",
     "_source": {
-      "title": "[GC] GC Count",
-      "visState": "{\"type\":\"metric\",\"params\":{\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"YGC\"}},{\"id\":\"2\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"FGC\"}}],\"listeners\":{}}",
+      "title": "[GC] GC Time",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"2\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"FGCT\"}},{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"YGCT\"}},{\"id\":\"4\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -112,11 +146,25 @@
     }
   },
   {
-    "_id": "[GC]-GC-Time",
+    "_id": "[GC]-GC-Count",
     "_type": "visualization",
     "_source": {
-      "title": "[GC] GC Time",
-      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"2\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"FGCT\"}},{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"YGCT\"}},{\"id\":\"4\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "title": "[GC] GC Count",
+      "visState": "{\"type\":\"metric\",\"params\":{\"fontSize\":\"40\"},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"YGC\"}},{\"id\":\"2\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"FGC\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jstatbeat-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "[GC]-Processes",
+    "_type": "visualization",
+    "_source": {
+      "title": "[GC] Processes",
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"beat.hostname\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"name\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"4\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"pid\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,

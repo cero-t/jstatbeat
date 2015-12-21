@@ -11,4 +11,4 @@ To apply jstatbeat template:
 
 ## Kibana dashboard
 
-Import dashboards.json and visualizations.json into kibana to create dashboards for jstatbeat.
+Import [dashboard.json](https://github.com/cero-t/jstatbeat/blob/master/etc/dashboard.json) into kibana to create dashboards for jstatbeat.

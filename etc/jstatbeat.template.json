@@ -24,6 +24,12 @@
         "@timestamp": {
           "type": "date"
         },
+        "name": {
+          "type": "string"
+        },
+        "pid": {
+          "type": "string"
+        },
         "S0C": {
           "doc_values": "true",
           "type": "float"
